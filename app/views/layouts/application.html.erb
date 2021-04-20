@@ -11,15 +11,23 @@
   </head>
 
   <body>
-     <p class="notice"><%= notice %></p>
+   <% if flash[:notice] %>
+  <div class="notification is-primary">
+   <p class="notice"><%= notice %></p>
+</div>
+<% end %>
+ <% if flash[:alert] %>
+  <div class="notification is-danger">
        <p class="alert"><%= alert %></p>
-
+  </div>
+<% end %>
        <div>
        <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="">
+    <%= link_to root_path, class: "navbar-item" do %>
+    <%# <a class="navbar-item" href=""> %>
       <img src="https://iconape.com/wp-content/png_logo_vector/clubhouse-logo.png" width="112" height="100">
-    </a>
+    <%end%>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -48,18 +56,19 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
+        <strong>
+            <%= link_to "Sign Up", new_user_registration_path, class: "button is_primary" %>
+            </strong>
+          <strong>
+            <%= link_to "Log In", user_session_path, class: "button is_primary" %>
+            </strong>
         </div>
       </div>
     </div>
   </div>
 </nav>
        </div>
+       <div class=""></div>
     <%= yield %>
   </body>
 </html>
