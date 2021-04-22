@@ -9,8 +9,6 @@ AllCops:
     - "app/models/user.rb"
 
   DisplayCopNames: true
-Documentation:
-    Enabled: false
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
