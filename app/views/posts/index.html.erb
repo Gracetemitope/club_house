@@ -14,9 +14,9 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.post %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'See Author', post %></td>
+        <%# <td><%= link_to 'Edit', edit_post_path(post) %>
+        <%# <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
       </tr>
     <% end %>
   </tbody>
