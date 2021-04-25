@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Author:</strong>
-  <%= @post.user_id %>
+  <strong>Author:
+  <%= @post.user.display_name %></strong>
 </p>
 
 <p>
@@ -15,5 +15,4 @@
   <%= @post.post %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', post_path %>
+<%= link_to 'Edit', edit_post_path(@post) %>
