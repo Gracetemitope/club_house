@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
-<h1>Post</h1>
+<h1>Posts</h1>
 
   <section>
     <% @posts.each do |post| %>
       <div class="post-container">
         <%= post.post %>
         <p>
-        <%= link_to 'See Post details', post %>
-        </p>
+                  <%= link_to 'See Post details', post %>
+             </p>
       </div>
     <% end %>
   </section>
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+                                    <%= link_to "New Post", new_post_path, class: "button is_primary" %>
